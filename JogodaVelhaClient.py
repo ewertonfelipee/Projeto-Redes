@@ -6,7 +6,7 @@ from functools import partial
 
 s = socket((AF_INET), SOCK_STREAM)
 host = '127.0.0.1'
-port = 7772
+port = 2021
 s.connect((host, port))
 
 window = Tk()
