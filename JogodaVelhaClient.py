@@ -70,7 +70,7 @@ def reset():
     global btns
     for i in range(3):
         for j in range(3):
-            btns[i][j].config(config=" ")
+            btns[i][j].config(text = " ")
             
     meu_turno = 1
     iteracao = 0
