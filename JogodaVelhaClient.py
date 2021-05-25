@@ -11,12 +11,12 @@ s.connect((host, port))
 
 window = Tk()
 window.title("Jogo da velha")
-window.geometry("300x300")
+window.geometry("400x300")
 
 simbolo_jogador = 'X'
 simbolo_rival = 'O'
-lbli = Label(window, text = "Você joga com: " + simbolo_jogador + ".")
-lbli.grid(row=1, column=0)
+lbli = Label(window, text = "Você joga com: " + simbolo_jogador)
+lbli.grid(row = 1, column = 0)
 
 meu_turno = 1
 def clicked (btn, i, j):
