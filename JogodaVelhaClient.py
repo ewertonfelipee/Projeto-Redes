@@ -29,7 +29,6 @@ def clicked (btn, i, j):
         s.send(str(button_number).encode('utf-8'))
         meu_turno = 0
         check(btn)
-        
             
 iteracao = 1
 def check (btn):
