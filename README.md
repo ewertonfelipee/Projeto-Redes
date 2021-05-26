@@ -2,8 +2,11 @@
 
 <p align="center">
  <a href="##Sobre">Sobre</a> •
- <a href="##Como-usar">Como usar</a> •  
- <a href="##Autores">Autores</a>
+ <a href="##Como-usar">Como usar</a> •
+ <a href="##Testes">Testes</a> •
+ <a href="##Tecnologias">Tecnologias</a> •
+ <a href="##Autores">Autores</a> • 
+ <a href="##Licença">Licença</a>
 </p>
 
 ## Sobre
