@@ -1,4 +1,4 @@
-# Jogo da velha
+#Jogo da velha
 
 <p align="center">
  <a href="##Sobre">Sobre</a> •
@@ -6,7 +6,7 @@
  <a href="##Autores">Autores</a>
 </p>
 
-## Sobre
+##Sobre
 
 Jogo da velha é uma aplicação em rede desenvolvida afim de validar a compreensão dos conceitos básicos de sockets ensinados na disciplina de redes de computadores.
 
