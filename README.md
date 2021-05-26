@@ -16,8 +16,8 @@ Jogo da velha é uma aplicação em rede desenvolvida afim de validar a compreen
 ## Como usar
 
 ### Pré-requisitos
-- Interpretador python;
-- ?.
+- Python 3;
+- Módulo Tkinter.
 
 ### Instalação
 
@@ -27,11 +27,11 @@ Apenas faça o download dos arquivos neste [repositório](https://github.com/ewe
 
 Primeiro execute o script servidor:
 ```bash
-python JogodaVelhaServer.py
+python3 JogodaVelhaServer.py
 ```
 Em seguida o script cliente:
 ```bash
-python JogodaVelhaClient.py
+python3 JogodaVelhaClient.py
 ```
 
 ## Testes
