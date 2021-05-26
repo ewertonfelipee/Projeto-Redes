@@ -39,8 +39,12 @@ def check (btn):
     global simbolo_jogador
     win = 0
     for i in range(3):
-        if ((btns[i][0]["text"] == btns[i][1]["text"] and btns[i][0]["text"] == btns[i][2]["text"] and btns[i][0]["text"] != " ")
-        or (btns[0][i]["text"] == btns[1][i]["text"] and btns[0][i]["text"] == btns[2][i]["text"] and btns[0][i]["text"] != " ")):
+        if ((btns[i][0]["text"] == btns[i][1]["text"] and 
+            btns[i][0]["text"] == btns[i][2]["text"] and 
+            btns[i][0]["text"] != " ")
+        or (btns[0][i]["text"] == btns[1][i]["text"] and 
+            btns[0][i]["text"] == btns[2][i]["text"] and 
+            btns[0][i]["text"] != " ")):
             if (btn["text"] == simbolo_jogador):
                 messagebox.showinfo("Vitória!",  "Parabéns!")
             else:
@@ -49,8 +53,12 @@ def check (btn):
             reset()
     
     if (win == 0):
-        if ((btns[0][0]["text"] == btns[1][1]["text"] and btns[0][0]["text"] == btns[2][2]["text"] and btns[0][0]["text"] != " ")
-        or (btns[0][2]["text"] == btns[1][1]["text"] and btns[0][2]["text"] == btns[2][0]["text"] and btns[0][2]["text"] != " ")):
+        if ((btns[0][0]["text"] == btns[1][1]["text"] and 
+            btns[0][0]["text"] == btns[2][2]["text"] and 
+            btns[0][0]["text"] != " ")
+        or (btns[0][2]["text"] == btns[1][1]["text"] and 
+            btns[0][2]["text"] == btns[2][0]["text"] and 
+            btns[0][2]["text"] != " ")):
             if(btn["text"]==simbolo_jogador):
                 messagebox.showinfo("Vitória!",  "Parabéns!")
             else:
@@ -77,7 +85,8 @@ def reset ():
 btns = [[0 for x in range(3)] for y in range(3)]
 for i in range(3):
     for j in range(3):
-        btns[i][j] = Button(window, text = " ", bg = "red", fg = "black", width = 8, height = 4)
+        btns[i][j] = Button(window, text = " ", bg = "red", fg = "black", 
+                            width = 8, height = 4)
         btns[i][j].config(command = partial(clicked, btns[i][j], i, j))
         btns[i][j].grid(row = i+10, column = j+3)
 
