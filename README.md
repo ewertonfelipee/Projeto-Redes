@@ -1,15 +1,5 @@
 # Jogo da velha
 
-## Tabela de conteúdos
-
-  * [Sobre](##Sobre)
-    * [Como usar](##Como-usar)
-      * [Pré-requisitos](###Pré-requisitos)
-      * [Instalação](###Instalação)
-      * [Execução](###Execução)
-  * [Testes](##Testes)
-  * [Tecnologias](##Tecnologias)
-
 ## Sobre
 
 Jogo da velha é uma aplicação em rede desenvolvida afim de validar a compreensão dos conceitos básicos de sockets ensinados na disciplina de redes de computadores.
