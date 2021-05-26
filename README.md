@@ -48,4 +48,4 @@ python JogodaVelhaClient.py
 
 ## Licença
 
-[MIT](https://choosealicense.com/licenses/mit/)
+? [MIT](https://choosealicense.com/licenses/mit/)
