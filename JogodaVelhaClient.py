@@ -7,10 +7,10 @@ from functools import partial
 from socket import *
 from _thread import *
 
-s = socket((AF_INET), SOCK_STREAM)
+servidor = socket((AF_INET), SOCK_STREAM)
 host = "127.0.0.1"
 port = 2021
-s.connect((host, port))
+servidor.connect((host, port))
 
 janela = Tk()
 janela.title("Jogo da velha")
@@ -26,11 +26,11 @@ meu_turno = 1
 def clicado (btn, i, j):
     global meu_turno
     global simbolo_jogador
-    global s
+    global servidor
     if ((btn["text"] == " ") and (meu_turno == 1)):
         btn["text"] = simbolo_jogador
         button_number = i*3+j
-        s.send(str(button_number).encode('utf-8'))
+        servidor.send(str(button_number).encode('utf-8'))
         meu_turno = 0
         verificar(btn)
             
@@ -93,17 +93,17 @@ for i in range(3):
         btns[i][j].config(command = partial(clicado, btns[i][j], i, j))
         btns[i][j].grid(row = i+10, column = j+3)
         
-def recvThread (s):
+def recvThread (servidor):
     global btns
     global meu_turno
     while True:
-        button_number = int(s.recv(2).decode('utf-8'))
+        button_number = int(servidor.recv(2).decode('utf-8'))
         row = int(button_number/3)
         column = int(button_number%3)
         btns[row][column]["text"] = simbolo_rival
         meu_turno = 1
         verificar(btns[row][column])
         
-start_new_thread(recvThread, (s, ))
+start_new_thread(recvThread, (servidor, ))
 
 janela.mainloop()
