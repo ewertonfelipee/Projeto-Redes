@@ -3,8 +3,6 @@
 <p align="center">
  <a href="#Sobre">Sobre</a> •
  <a href="#Como-usar">Como usar</a> •
- <a href="#Testes">Testes</a> •
- <a href="#Tecnologias">Tecnologias</a> •
  <a href="#Autores">Autores</a> • 
  <a href="#Licença">Licença</a>
 </p>
@@ -33,19 +31,13 @@ Em seguida o script cliente:
 ```bash
 python3 JogodaVelhaClient.py
 ```
-
-## Testes
-
-?
-
-##Tecnologias
-
-?
+Daí é só jogar!
 
 ## Autores
 
-?
+Ewerton Felipe
+Gustavo Rodrigues
 
 ## Licença
 
-? [MIT](https://choosealicense.com/licenses/mit/)
+[MIT](https://choosealicense.com/licenses/mit/)
