@@ -35,8 +35,8 @@ Daí é só jogar!
 
 ## Autores
 
-Ewerton Felipe
-Gustavo Rodrigues
+- Ewerton Felipe
+- Gustavo Rodrigues
 
 ## Licença
 
