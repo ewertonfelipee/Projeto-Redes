@@ -27,7 +27,7 @@ Primeiro execute o script servidor:
 ```bash
 python3 JogodaVelhaServer.py
 ```
-Em seguida o script cliente:
+Em seguida, em outra instância do terminal, execute o script cliente:
 ```bash
 python3 JogodaVelhaClient.py
 ```
