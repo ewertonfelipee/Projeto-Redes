@@ -12,17 +12,18 @@ host = "127.0.0.1"
 port = 2021
 s.connect((host, port))
 
-window = Tk()
-window.title("Jogo da velha")
-window.geometry("400x300")
+janela = Tk()
+janela.title("Jogo da velha")
+janela.geometry("400x300")
 
 simbolo_jogador = 'X'
 simbolo_rival = 'O'
-lbli = Label(window, text = "Você joga com: " + simbolo_jogador)
+lbli = Label(janela, text = "Você joga com: " + simbolo_jogador)
 lbli.grid(row = 1, column = 0)
 
 meu_turno = 1
-def clicked (btn, i, j):
+
+def clicado (btn, i, j):
     global meu_turno
     global simbolo_jogador
     global s
@@ -31,10 +32,10 @@ def clicked (btn, i, j):
         button_number = i*3+j
         s.send(str(button_number).encode('utf-8'))
         meu_turno = 0
-        check(btn)
+        verificar(btn)
             
 iteracao = 1
-def check (btn):
+def verificar (btn):
     global iteracao
     global btns
     global simbolo_jogador
@@ -51,7 +52,7 @@ def check (btn):
             else:
                 messagebox.showinfo("Derrota!", "Mais sorte na próxima partida!")
             win = 1
-            reset()
+            redefinir()
             
     if (win == 0):
         if ((btns[0][0]["text"] == btns[1][1]["text"] and 
@@ -65,15 +66,15 @@ def check (btn):
             else:
                 messagebox.showinfo("Derrota!", "Mais sorte na próxima partida!")
             win = 1
-            reset()
+            redefinir()
             
     if ((win == 0) and (iteracao == 9)):
         messagebox.showinfo("Velha!", "Ninguém ganhou!")
-        reset()
+        redefinir()
         
     iteracao += 1
 
-def reset ():
+def redefinir ():
     global iteracao
     global meu_turno
     global btns
@@ -87,9 +88,9 @@ def reset ():
 btns = [[0 for x in range(3)] for y in range(3)]
 for i in range(3):
     for j in range(3):
-        btns[i][j] = Button(window, text= " ", bg = "blue", fg = "black", 
+        btns[i][j] = Button(janela, text= " ", bg = "blue", fg = "black", 
                             width = 8, height = 4)
-        btns[i][j].config(command = partial(clicked, btns[i][j], i, j))
+        btns[i][j].config(command = partial(clicado, btns[i][j], i, j))
         btns[i][j].grid(row = i+10, column = j+3)
         
 def recvThread (s):
@@ -101,8 +102,8 @@ def recvThread (s):
         column = int(button_number%3)
         btns[row][column]["text"] = simbolo_rival
         meu_turno = 1
-        check(btns[row][column])
+        verificar(btns[row][column])
         
 start_new_thread(recvThread, (s, ))
 
-window.mainloop()
+janela.mainloop()
