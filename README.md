@@ -31,7 +31,7 @@ Em seguida, em outra instância do terminal, execute o script cliente:
 ```bash
 python3 JogodaVelhaClient.py
 ```
-Daí é só jogar... Azul faz a primeira jogada!
+Daí é só jogar! Lembre-se de que o azul sempre faz a primeira jogada...
 
 ## Autores
 
