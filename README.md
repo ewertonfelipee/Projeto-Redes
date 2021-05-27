@@ -19,7 +19,7 @@ Jogo da velha é uma aplicação em rede desenvolvida afim de validar a compreen
 
 ### Instalação
 
-Apenas faça o download dos arquivos neste [repositório](https://github.com/ewertonfelipee/Projeto-Redes).
+Apenas faça o download dos arquivos [aqui](https://github.com/ewertonfelipee/Projeto-Redes) contidos.
 
 ### Execução
 
